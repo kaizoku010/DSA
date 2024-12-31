@@ -1,0 +1,1 @@
+function oneEdit(string, string)

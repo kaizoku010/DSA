@@ -1,0 +1,6 @@
+function diameterOfBt(root){
+
+    if(!)
+
+
+}
