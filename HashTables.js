@@ -16,18 +16,52 @@ class HashTable{
 
     set(key, value){
         const index = this.hash(key)
-        this.table[index] = value
+       // this.table[index] = [key, value]
+        //avoiding hashing collisions
+        const bucket = this.table[index]
+
+        if(!bucket){
+            this.table[index] = [[key, value]]
+        } else {
+            const dupKeys = bucket.find(item => item[0]===key)
+                if(dupKeys){
+                    dupKeys[1] = value
+                } else {
+                    bucket.push([key, value])
+                }
+            
+        }
     }
 
     get(key){
         const index = this.hash(key)
 
-        return this.table[index]
+      //  return this.table[index]
+        const bucket = this.table[index]
+
+        if(bucket){
+            const dupKeys = bucket.find(item => item[0]===key)
+            if(dupKeys){
+                return dupKeys[1]
+            }
+        }
+
+        return undefined
+    
+    
     }
 
     remove(key){
         const index = this.hash(key)
-        this.table[index] = undefined
+       // this.table[index] = undefined
+        const bucket = this.table[index]
+        if(bucket){
+            const duplicateItems = bucket.find(item => item[0]===key)
+            if(duplicateItems){
+                bucket.splice(bucket.indexOf(duplicateItems), 1)
+            }
+        }
+    
     }
 
     print() {
