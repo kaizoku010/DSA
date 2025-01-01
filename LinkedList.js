@@ -6,6 +6,9 @@ class Node{
     }
 }
 
+
+//singly linked list
+//this simply has a head pointer abnd a next that points to the next node in the list
 class LinkedList{
     constructor(){
         this.size = 0

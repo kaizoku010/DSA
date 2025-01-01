@@ -2,9 +2,7 @@
 
 const memoize=(fn)=>{
     const cache = {}
-    //check the cahce object 
     return function(...args){
-        //if the args passed exist in the cache
         if(cache[args]){
             return cache[args]
         }
