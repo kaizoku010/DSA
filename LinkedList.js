@@ -320,29 +320,8 @@ removeFromFront(){
 
 }
 
-const list = new LinkedList();
-console.log("List is empty:", list.isEmpty())
-console.log("List size", list.getSize())
-list.print()
 
-list.insert(10, 0)
-list.print()
-list.insert(30, 0)
-list.print()
-list.insert(20, 1)
-list.print()
-list.append(40)
-list.append(30)
-console.log(list.getSize())
-console.log(list.removeFrom(0))//remove from index
-list.print()
-console.log(list.getSize())
-list.append(20)
-console.log(list.removeValue(10))//remove item by value
-list.print()
-console.log(list.getSize())
-list.reverse()
-list.print()
+module.exports = LinkedList
 
 
                                                                                                                                                       
