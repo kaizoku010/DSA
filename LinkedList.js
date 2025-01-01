@@ -10,6 +10,7 @@ class LinkedList{
     constructor(){
         this.size = 0
         this.head = null
+        this.tail = null
     }
 
     isEmpty(){
@@ -43,7 +44,6 @@ class LinkedList{
     // O(n)
     append(value){
         //add node at the end of the list 
-        
         //create new node
         const newNode = new Node(value);
         //check if list is empty
@@ -247,7 +247,75 @@ reverse(){
     }
     //finally we point the head to the prev which is facig the opposite direction
     this.head = prev
-    
+
+}
+
+//working with a tail and head
+prependWithTail(value){
+
+const node = new Node(value);
+//base case
+if(this,this.isEmpty()){
+    //point bother pointers at new node
+    this.head = node
+    this.tail = node
+}else {
+    //if not empty
+    //point the node.next to the new head
+    node.next = this.head
+    //reasign head to the new node, the first node in the list
+    this.head = node
+}
+this.size++
+}
+
+appendWithTail(value){
+    const node = new Node(value)
+    //base case
+    if(this.isEmpty()){
+        this.head = node
+        this.tail = node
+    } else {
+        this.tail.next = node
+        thi.tail = node
+    }
+    this.size++
+
+}
+
+removeFromEnd(){
+
+    if(this.isEmpty()){
+        return null
+    }
+    const value = this.head.value;
+    this.head = this.head.next
+    this.size--
+    return value
+
+}
+
+removeFromFront(){
+    if(this.isEmpty()){
+        return null
+    }
+
+    const value = this.tail.value;
+    if(this.size === 1){
+        this.head = null
+        this.tail = null
+    } else {
+        let prev = this.head 
+        while(prev.next !== this.tail){
+            prev = prev.next
+        }
+        prev.next = null
+        this.tail = prev
+    }
+
+    this.size
+    return value
+
 }
 
 }
