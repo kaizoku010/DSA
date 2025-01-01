@@ -1,5 +1,5 @@
 function diameterOfBt(root) {
-
+//find the minimum length of a binary tree
     if (!root) return 0;
 
     let max = 0;

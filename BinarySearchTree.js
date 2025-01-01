@@ -176,7 +176,7 @@ console.log(bst.bfs())
 
 //fibonaci vibes
 
-const fib=n=>{
+function fib(n) {
   let result = 0;
   if(n <= 2){
     return result = 1;
