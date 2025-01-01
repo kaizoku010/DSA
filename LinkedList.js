@@ -247,6 +247,7 @@ reverse(){
     }
     //finally we point the head to the prev which is facig the opposite direction
     this.head = prev
+    
 }
 
 }
@@ -274,3 +275,6 @@ list.print()
 console.log(list.getSize())
 list.reverse()
 list.print()
+
+
+                                                                                                                                                      
