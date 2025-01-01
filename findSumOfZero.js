@@ -13,6 +13,7 @@ function tripletdToZero(arr){
         if(i > 0 && arr[i] === arr[i-1]){
             continue
         }
+        //lets find our left pointer
         searchPair(arr, target, i + 1, triplets)    
     }
 

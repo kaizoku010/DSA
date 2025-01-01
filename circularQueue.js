@@ -12,7 +12,7 @@ class CircularQueue{
     }
 
     isEmpty(){
-        return this.currentLength !== this.size
+        return this.currentLength === 0
     }
 
     enqueue(value){

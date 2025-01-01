@@ -32,7 +32,7 @@ class Heap{
     heapifyUp(){
         let currentIndex = this.data.length - 1;
 
-        while(this.data[currentIndex] > this.data[getParetIndex(currentIndex)]){
+        while(this.data[currentIndex] > this.data[this.getParetIndex(currentIndex)]){
             this.swap(currentIndex, this.getLeftChildIndex(currentIndex))
 
             currentIndex = this.getParetIndex(currentIndex)
