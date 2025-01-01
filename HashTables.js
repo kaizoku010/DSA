@@ -14,6 +14,9 @@ class HashTable{
         return total % this.size
     }
 
+    //O(1)
+    //hash tables we consider avarage time complexity not worst time complexities 
+    // because by having better hashing functions
     set(key, value){
         const index = this.hash(key)
        // this.table[index] = [key, value]
@@ -32,7 +35,7 @@ class HashTable{
             
         }
     }
-
+//O(1)
     get(key){
         const index = this.hash(key)
 
